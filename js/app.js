@@ -25,7 +25,7 @@ const calculateButton = document.getElementById('calculate-btn').addEventListene
     const totalIncomeNumber = parseFloat(totalIncome);
     // console.log(totalIncome);
     // total expanses
-    document.getElementById('expenses').innerText = totalIncomeNumber;
+
 
 
     // total balance
@@ -33,5 +33,6 @@ const calculateButton = document.getElementById('calculate-btn').addEventListene
     const currentBalanceNumber = parseFloat(currentBalance);
     const totalBalance = incomeValue - totalIncomeNumber;
 
-    document.getElementById('balance').innerText = totalBalance;
+    document.getElementById('balance').innerText = totalIncomeNumber;
+    document.getElementById('expenses').innerText = totalBalance;
 })
