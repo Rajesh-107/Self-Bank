@@ -29,20 +29,20 @@
                     <div class="col">
                         <div class="p-3 border bg-light ">
                             <h2 class="text-center">Income</h2>
-                            <p>Income:<input type="text" placeholder="10000" class="form-control"></p>
+                            <p>Income:<input id="income" type="text" placeholder="10000" class="form-control"></p>
                             <h2 class="text-center">Expenses</h2>
-                            <p>Food:<input type="text" placeholder="3000" class="form-control"></p>
-                            <p>Rent:<input type="text" placeholder="2000" class="form-control"></p>
-                            <p>Clothes:<input type="text" placeholder="500" class="form-control"></p>
+                            <p>Food:<input type="text" id="food" placeholder="3000" class="form-control"></p>
+                            <p>Rent:<input type="text" id="rent" placeholder="2000" class="form-control"></p>
+                            <p>Clothes:<input type="text" id="clothes" placeholder="500" class="form-control"></p>
                             <div class="d-flex justify-content-center">
-                                <button class="btn btn-primary">Calculate</button>
+                                <button id="calculate-btn" class="btn btn-primary">Calculate</button>
                             </div>
                             <div class="text-center pt-4">
-                                <h5 class="pb-4">Total Expenses:5500</h5>
-                                <h5>Balance: 4500</h5>
+                                <h5 class="pb-4">Total Expenses:<span id="expenses">00</span></h5>
+                                <h5>Balance: <span id="balance">00</span></h5>
                             </div>
                             <div class="pt-3">
-                                <p>Save: <input class="form" type="text" placeholder="20"> % <button class="button">Save</button></p>
+                                <p>Save: <input class="form" type="text" placeholder="20"> % <button class="btn btn-primary m-4">Save</button></p>
                             </div>
                             <div class="text-center pt-4">
                                 <h5 class="pb-4">Saving Amount: 2000</h5>
