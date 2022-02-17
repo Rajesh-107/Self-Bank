@@ -29,12 +29,12 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
 })
 
 function errorMessage() {
-    // const error = document.getElementById('income-error');
-    // if (isNaN(document.getElementById('income').value)) {
-    //     error.textContent = 'Please input vaild number';
-    // } else {
-    //     error.textContent = '';
-    // }
+    const error = document.getElementById('income-error');
+    if (isNaN(document.getElementById('income').value)) {
+        error.textContent = 'Please input valid number';
+    } else {
+        error.textContent = '';
+    }
     const error = document.getElementById('income').value;
     if (error > 0) {
         const showError = document.getElementById('valid-num');
@@ -60,21 +60,20 @@ document.getElementById('save').addEventListener('click', function() {
     saveTotal.innerText = savingAmount;
 
     const remaining = document.getElementById('remaining');
-    const balance = document.getElementById('balance').innerText;
+    const balanceTotal = document.getElementById('balance').innerText;
 
-    const remainingAmount = parseFloat(balance - savingAmount);
+    const remainingAmount = parseFloat(balanceTotal - savingAmount);
     remaining.innerText = remainingAmount;
 
-    const mainRemainingBalance = document.getElementById('remaining');
-    const mainBalance = document.getElementById('balance');
-    if (mainBalance > mainRemainingBalance) {
-        alert('Main Balance can not less');
-    } else {
-        console.log(mainBalance);
+
+
+    function errorMain() {
+        const mainRemainingBalance = document.getElementById('remaining');
+        const mainBalance = document.getElementById('balance');
+        if (mainBalance > mainRemainingBalance) {
+            alert('Go ahead');
+        }
     }
+    return errorMain;
 
-
-    // document.getElementById('remaining').value;
-
-    // console.log('click', remaining);
-})
+});
