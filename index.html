@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Income Account</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,24 +29,27 @@
                     <div class="col">
                         <div class="p-3 border bg-light ">
                             <h2 class="text-center">Income</h2>
-                            <p>Income:<input id="income" type="text" placeholder="10000" class="form-control"></p>
+                            <p><span id="income-error">Income:</span><input id="income" type="text" placeholder="10000" class="form-control"></p>
                             <h2 class="text-center">Expenses</h2>
                             <p>Food:<input type="text" id="food" placeholder="3000" class="form-control"></p>
                             <p>Rent:<input type="text" id="rent" placeholder="2000" class="form-control"></p>
                             <p>Clothes:<input type="text" id="clothes" placeholder="500" class="form-control"></p>
                             <div class="d-flex justify-content-center">
-                                <button id="calculate-btn" class="btn btn-primary">Calculate</button>
+                                <button onclick="errorMessage()" id="calculate-btn" class="btn btn-primary">Calculate</button>
                             </div>
                             <div class="text-center pt-4">
                                 <h5 class="pb-4">Total Expenses:<span id="expenses">00</span></h5>
                                 <h5>Balance: <span id="balance">00</span></h5>
                             </div>
                             <div class="pt-3">
-                                <p>Save: <input class="form" type="text" placeholder="20"> % <button class="btn btn-primary m-4">Save</button></p>
+                                <p>Save: <input id="save-input" class="form" type="text" placeholder="20"> % </p>
+                                <div>
+                                    <button class="btn btn-primary m-4"><span id="save">Save</span></button>
+                                </div>
                             </div>
                             <div class="text-center pt-4">
-                                <h5 class="pb-4">Saving Amount: 2000</h5>
-                                <h5>Remaining Balance: 2500</h5>
+                                <h5 class="pb-4">Saving Amount: <span id="saving-amount">00</span></h5>
+                                <h5>Remaining Balance: <span id="remaining">00</span></h5>
                             </div>
                         </div>
                     </div>
