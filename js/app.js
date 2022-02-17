@@ -58,8 +58,14 @@ document.getElementById('save').addEventListener('click', function() {
 
     const remainingAmount = parseFloat(balanceTotal - savingAmount);
     remaining.innerText = remainingAmount;
+    const balanceValue = document.getElementById('balance');
+    balanceValue.innerText = balance;
 
-
+    if (savingAmount < balance) {
+        alert('its ok');
+    } else {
+        alert('its not ok');
+    }
 
 
 
