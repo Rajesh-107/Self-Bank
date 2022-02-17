@@ -29,6 +29,7 @@
                     <div class="col">
                         <div class="p-3 border bg-light ">
                             <h2 class="text-center">Income</h2>
+                            <p></p>
                             <p><span id="income-error">Income:</span><input id="income" type="text" placeholder="10000" class="form-control"></p>
                             <h2 class="text-center">Expenses</h2>
                             <p>Food:<input type="text" id="food" placeholder="3000" class="form-control"></p>
@@ -36,6 +37,9 @@
                             <p>Clothes:<input type="text" id="clothes" placeholder="500" class="form-control"></p>
                             <div class="d-flex justify-content-center">
                                 <button onclick="errorMessage()" id="calculate-btn" class="btn btn-primary">Calculate</button>
+                                <div class="notify">
+                                    <p id="valid-num">Please Input real number</p>
+                                </div>
                             </div>
                             <div class="text-center pt-4">
                                 <h5 class="pb-4">Total Expenses:<span id="expenses">00</span></h5>

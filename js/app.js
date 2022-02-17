@@ -29,12 +29,21 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
 })
 
 function errorMessage() {
-    const error = document.getElementById('income-error');
-    if (isNaN(document.getElementById('income').value)) {
-        error.textContent = 'Please input vaild number';
+    // const error = document.getElementById('income-error');
+    // if (isNaN(document.getElementById('income').value)) {
+    //     error.textContent = 'Please input vaild number';
+    // } else {
+    //     error.textContent = '';
+    // }
+    const error = document.getElementById('income').value;
+    if (error > 0) {
+        const showError = document.getElementById('valid-num');
+        showError.style.display = 'block';
+
     } else {
-        error.textContent = '';
+        alert('Please input Integer Number');
     }
+
 }
 
 
@@ -55,6 +64,16 @@ document.getElementById('save').addEventListener('click', function() {
 
     const remainingAmount = parseFloat(balance - savingAmount);
     remaining.innerText = remainingAmount;
+
+    const mainRemainingBalance = document.getElementById('remaining');
+    const mainBalance = document.getElementById('balance');
+    if (mainBalance > mainRemainingBalance) {
+        alert('Main Balance can not less');
+    } else {
+        console.log(mainBalance);
+    }
+
+
     // document.getElementById('remaining').value;
 
     // console.log('click', remaining);

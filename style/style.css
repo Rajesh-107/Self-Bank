@@ -23,3 +23,7 @@ body {
     width: 280px;
     padding: 8px;
 }
+
+.notify {
+    display: none;
+}
