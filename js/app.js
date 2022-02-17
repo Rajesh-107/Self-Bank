@@ -17,11 +17,12 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
     document.getElementById('clothes').value = '';
     // console.log(clothesValue);
 
+    //expenses
     const totalExpenses = foodValue + rentValue + clothesValue;
     const expenses = document.getElementById('expenses');
     expenses.innerText = totalExpenses;
 
-
+    //balance
     const balance = incomeValue - totalExpenses;
     const balanceValue = document.getElementById('balance');
     balanceValue.innerText = balance;
@@ -61,12 +62,10 @@ document.getElementById('save').addEventListener('click', function() {
     const balanceValue = document.getElementById('balance');
     balanceValue.innerText = balance;
 
-    if (savingAmount < balance) {
-        alert('its ok');
-    } else {
-        alert('its not ok');
-    }
-
-
+    // if (savingAmount < balance) {
+    //     alert('its ok');
+    // } else {
+    //     alert('its not ok');
+    // }
 
 });
