@@ -29,12 +29,6 @@ document.getElementById('calculate-btn').addEventListener('click', function() {
 })
 
 function errorMessage() {
-    const error = document.getElementById('income-error');
-    if (isNaN(document.getElementById('income').value)) {
-        error.textContent = 'Please input valid number';
-    } else {
-        error.textContent = '';
-    }
     const error = document.getElementById('income').value;
     if (error > 0) {
         const showError = document.getElementById('valid-num');
@@ -67,13 +61,6 @@ document.getElementById('save').addEventListener('click', function() {
 
 
 
-    function errorMain() {
-        const mainRemainingBalance = document.getElementById('remaining');
-        const mainBalance = document.getElementById('balance');
-        if (mainBalance > mainRemainingBalance) {
-            alert('Go ahead');
-        }
-    }
-    return errorMain;
+
 
 });
